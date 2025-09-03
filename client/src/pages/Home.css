@@ -1,0 +1,137 @@
+/* Container */
+.todo-container {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #f9fafc;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Title */
+.title {
+  text-align: center;
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Input Section */
+.todo-input {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.todo-input input {
+  flex: 1;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  outline: none;
+  font-size: 16px;
+  transition: border 0.3s;
+}
+
+.todo-input input:focus {
+  border: 1px solid #3b82f6;
+}
+
+.todo-input button {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  background: #3b82f6;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.todo-input button:hover {
+  background: #2563eb;
+}
+
+/* Todo List */
+.todo-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.todo-item {
+  background: #fff;
+  margin: 10px 0;
+  padding: 14px 16px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: transform 0.2s;
+  border: 1px solid #eee;
+}
+
+.todo-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+}
+
+.todo-item.done span {
+  text-decoration: line-through;
+  color: #888;
+}
+
+/* Icons */
+.icons {
+  display: flex;
+  gap: 12px;
+}
+
+.icon {
+  font-size: 20px;
+  cursor: pointer;
+  transition: transform 0.2s, color 0.3s;
+}
+
+.icon:hover {
+  transform: scale(1.2);
+}
+
+.icon.toggle {
+  color: gray;
+}
+
+.icon.toggle.active {
+  color: green;
+}
+
+.icon.delete {
+  color: red;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .todo-container {
+    padding: 15px;
+  }
+
+  .title {
+    font-size: 22px;
+  }
+
+  .todo-input {
+    flex-direction: column;
+  }
+
+  .todo-input input,
+  .todo-input button {
+    width: 100%;
+  }
+
+  .icons {
+    gap: 8px;
+  }
+}
